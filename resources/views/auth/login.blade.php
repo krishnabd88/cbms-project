@@ -75,6 +75,17 @@
                                         @enderror
                                     </div>
 
+                                    <!-- reCAPTCHA -->
+                                    <div class="form-group text-center">
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}
+                                        @error('g-recaptcha-response')
+                                            <span class="text-danger d-block mt-2">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
                                     <!-- Remember Me -->
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
